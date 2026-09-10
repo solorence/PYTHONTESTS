@@ -1,0 +1,5 @@
+John - john@gmail.com - 75000
+Mary - mary@yahoo.com - 68000
+Peter - peter@gmail.com - 92000
+Grace - grace@outlook.com - 81000
+Invalid - invalid@email - 50000

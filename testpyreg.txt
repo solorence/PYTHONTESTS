@@ -1,0 +1,35 @@
+import re
+
+text = """
+John: john@gmail.com
+Mary: mary@yahoo.com
+Peter: peter@gmail.com
+Invalid: peter@gmail
+Grace: grace@outlook.com
+John: john@gmail.com
+"""
+
+emailreg = re.compile(r'\w+@\w+\.com')
+
+validMails = emailreg.findall(text)
+
+emailsAfterClearingDuplicates = []
+
+sortingDuplicates={}
+
+for email in validMails:
+ sortingDuplicates.setdefault(email, 0)
+ sortingDuplicates[email]+=1
+
+print(sortingDuplicates)
+
+
+placeHolderList=[]
+
+for email in sortingDuplicates.keys():
+ placeHolderList.append(email)
+
+validMails = placeHolderList
+
+print(validMails)
+
