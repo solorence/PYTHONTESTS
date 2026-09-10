@@ -1,0 +1,61 @@
+Challenge 4 — No regex this time
+We're going to deliberately remove regex.
+I want to see whether you can manipulate strings, lists and dictionaries without reaching for regex.
+Create this string:
+sales = """
+Paracetamol, 25, 1500
+Amoxicillin, 10, 3000
+Vitamin C, 15, 2000
+Paracetamol, 12, 1500
+Ibuprofen, 8, 2500
+Amoxicillin, 5, 3000
+"""
+Each line contains:
+Product, quantity sold, price
+Your program must:
+Convert the text into individual records.
+Extract the product name, quantity and price.
+Calculate the total quantity sold for each product.
+Calculate the total sales value for each product.
+Put the results into a dictionary.
+Your final result should conceptually look like:
+Paracetamol:
+    quantity = 37
+    sales = 55500
+
+Amoxicillin:
+    quantity = 15
+    sales = 45000
+
+Vitamin C:
+    quantity = 15
+    sales = 30000
+
+Ibuprofen:
+    quantity = 8
+    sales = 20000
+Restrictions
+Do not use regex.
+Use only things you've already studied:
+strings
+lists
+dictionaries
+numbers
+int
+loops
+conditions
+functions
+string methods
+And here's the important part
+I don't want you to simply make the output look right.
+I want you to make the dictionary itself contain the accumulated information.
+For example, something along the lines of:
+results = {
+    'Paracetamol': {...},
+    'Amoxicillin': {...}
+}
+But you decide the exact structure.
+This exercise is going to test whether you can move information from:
+raw text → strings → lists → dictionary → calculations
+without needing me to tell you each intermediate step.
+Take your time. Send me your code when you're done.
