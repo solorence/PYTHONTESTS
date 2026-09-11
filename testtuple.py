@@ -36,15 +36,13 @@ removeDuplicatesInList(listOfStudentInfo)
 
 def addToRecord(LIST):
  for data in LIST:
-  name, age, score = list(data)
-  datainfo = list(data)
+  name, age, score = list(data)  
   studentNames.append(name)
 
-  for info in datainfo:
-   record[name]={}
-   record[name]['name']= name
-   record[name]['age']= age
-   record[name]['score']= score
+  record[name]={}
+  record[name]['name']= name
+  record[name]['age']= age
+  record[name]['score']= score
 
 
 addToRecord(listOfStudentInfo)
