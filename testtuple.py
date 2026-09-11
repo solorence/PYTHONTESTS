@@ -72,20 +72,21 @@ print('\nAverage Score:', calAverageScore())
 print('\nThe student with the highest Score is: ', studentWithHighestScore()   )
 
 for name in record:
- if int(record[name]['score']) >= 90:
-  scoreCategory['Excellent'] = []
+ score = int(record[name]['score'])
+ if score >= 90:
+  scoreCategory.setdefault('Excellent', [])
   scoreCategory['Excellent'].append(name)
  
- elif int(record[name]['score']) >= 80 and int(record[name]['score'])  <= 89:
-   scoreCategory['Very Good'] = []
+ elif score >= 80 and score  <= 89:
+   scoreCategory.setdefault('Very Good', [])
    scoreCategory['Very Good'].append(name)
  
- elif int(record[name]['score']) >= 70 and int(record[name]['score']) <= 79:
-  scoreCategory['Good'] = []
+ elif score >= 70 and score <= 79:
+  scoreCategory.setdefault('Good', [])
   scoreCategory['Good'].append(name)
  
- elif int(record[name]['score']) < 70:
-   scoreCategory['Needs Improvement'] = []
+ elif score < 70:
+   scoreCategory.setdefault('Needs Improvement', [])
    scoreCategory['Needs Improvement'].append(name)
 
 print('\nscoreCategory: ',scoreCategory)
