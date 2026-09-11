@@ -1,0 +1,50 @@
+Challenge 6 — Employee Eligibility Checker
+
+This time, I want you to focus especially on and / or / not, while still using the things you've already learned.
+
+Start with:
+
+employees = [
+    {'name': 'John', 'age': 34, 'salary': 75000, 'active': True},
+    {'name': 'Mary', 'age': 28, 'salary': 68000, 'active': True},
+    {'name': 'Peter', 'age': 41, 'salary': 92000, 'active': False},
+    {'name': 'Grace', 'age': 31, 'salary': 81000, 'active': True},
+    {'name': 'David', 'age': 24, 'salary': 55000, 'active': False}
+]
+Your tasks
+
+Write a program that determines:
+
+Eligible employees
+age is 30 or above
+AND salary is 80,000 or above
+AND employee is active
+Employees who need attention
+employee is not active
+OR salary is below 60,000
+Create a dictionary like:
+{
+    'eligible': [...],
+    'needs_attention': [...]
+}
+Print the names in each category.
+Important restriction
+
+Don't use max(), min(), filter(), list comprehensions, or other shortcuts you haven't learned yet.
+
+Use the things you already know:
+
+dictionaries
+lists
+loops
+if / elif / else
+and
+or
+not
+functions
+numbers
+strings
+
+Don't worry about making the code short. I want to see how you think.
+
+Send me your attempt when you're done. I won't give you the solution beforehand.
