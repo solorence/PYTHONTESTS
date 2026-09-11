@@ -53,7 +53,7 @@ def calAverageScore():
  total=0
  for name in studentNames:
    total += int(record[name]['score'])
- return total//len(studentNames)
+ return total/len(studentNames)
 
 
 def studentWithHighestScore():
@@ -76,11 +76,11 @@ for name in record:
   scoreCategory['Excellent'] = []
   scoreCategory['Excellent'].append(name)
  
- elif int(record[name]['score']) >= 80 or int(record[name]['score'])  <= 89:
+ elif int(record[name]['score']) >= 80 and int(record[name]['score'])  <= 89:
    scoreCategory['Very Good'] = []
    scoreCategory['Very Good'].append(name)
  
- elif int(record[name]['score']) >= 70 or int(record[name]['score']) <= 79:
+ elif int(record[name]['score']) >= 70 and int(record[name]['score']) <= 79:
   scoreCategory['Good'] = []
   scoreCategory['Good'].append(name)
  
