@@ -8,7 +8,7 @@ Mary, 21, 65"""
 listOfStudentInfo=[]
 record={}
 studentNames=[]
-studentsByScoreCategory={}
+scoreCategory={}
 
 for student in students.split('\n'):
  listOfStudentInfo.append(tuple(student.split(', ')))
@@ -67,11 +67,29 @@ def studentWithHighestScore():
  return studentName   
 
 
-print('Average Score:', calAverageScore())
+print('\nAverage Score:', calAverageScore())
 
-print('The student with the highest Score is: ', studentWithHighestScore()   )
+print('\nThe student with the highest Score is: ', studentWithHighestScore()   )
 
+for name in record:
+ if int(record[name]['score']) >= 90:
+  scoreCategory['Excellent'] = []
+  scoreCategory['Excellent'].append(name)
+ 
+ elif int(record[name]['score']) >= 80 or int(record[name]['score'])  <= 89:
+   scoreCategory['Very Good'] = []
+   scoreCategory['Very Good'].append(name)
+ 
+ elif int(record[name]['score']) >= 70 or int(record[name]['score']) <= 79:
+  scoreCategory['Good'] = []
+  scoreCategory['Good'].append(name)
+ 
+ elif int(record[name]['score']) < 70:
+   scoreCategory['Needs Improvement'] = []
+   scoreCategory['Needs Improvement'].append(name)
 
+print('\nscoreCategory: ',scoreCategory)
+ 
 
 
 
