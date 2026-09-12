@@ -5,3 +5,27 @@ employees = [
     {'name': 'Grace', 'age': 31, 'salary': 81000, 'active': True},
     {'name': 'David', 'age': 24, 'salary': 55000, 'active': False}
 ]
+
+status = {'eligible':[], 'needs_attention':[]}
+for data in employees:
+ if data['age'] >= 30 and data['salary'] >= 80000 and data['active'] :
+  status['eligible'].append(data['name'])
+else:
+ if not data['active'] or data['salary'] < 60000:
+  status['needs_attention'].append(data['name'])
+     
+print(status)
+
+def printEligibleEmployees():
+ print('\nEligible Employees:')
+ for name in status['eligible']:
+   print(name)
+
+def printEmployeThatNeedsAttention():
+ print('\nEmployees that need attention:')
+ for name in status['needs_attention']:
+   print(name)
+ 
+
+printEligibleEmployees()                             
+printEmployeThatNeedsAttention()
