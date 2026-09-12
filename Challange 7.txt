@@ -52,23 +52,6 @@ and separately:
 > Does this employee need attention?
 
 
-
-So I would actually prefer:
-
-for data in employees:
-    if ...:
-        ...
-
-    if ...:
-        ...
-
-That distinction becomes important as programs get more complicated.
-
-Challenge 6: passed. Your and, or, and not are looking much better.
-
-
----
-
 Challenge 7 — Nested decisions
 
 Now let's combine conditions + dictionaries + lists + strings + numbers.
