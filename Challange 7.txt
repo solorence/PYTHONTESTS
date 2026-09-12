@@ -1,0 +1,120 @@
+Yes — now the program is logically correct. 👍
+
+Your output should be:
+
+{'eligible': ['Grace'], 'needs_attention': ['Peter', 'David']}
+
+Eligible Employees:
+Grace
+
+Employees that need attention:
+Peter
+David
+
+What you got right
+
+Your eligibility condition:
+
+if data['age'] >= 30 and data['salary'] >= 80000 and data['active']:
+
+is exactly right.
+
+And:
+
+if not data['active'] or (data['salary'] < 60000):
+
+is also right.
+
+You also correctly kept the else inside the for loop, so every employee gets evaluated.
+
+One conceptual point
+
+You used:
+
+if eligible:
+    ...
+else:
+    if needs_attention:
+        ...
+
+This means an employee who is eligible will never be checked for needs_attention.
+
+For this particular exercise, that's fine because an eligible employee cannot be inactive or have a salary below ₦60,000 anyway.
+
+But conceptually, the requirements were two independent questions:
+
+> Is this employee eligible?
+
+
+
+and separately:
+
+> Does this employee need attention?
+
+
+
+So I would actually prefer:
+
+for data in employees:
+    if ...:
+        ...
+
+    if ...:
+        ...
+
+That distinction becomes important as programs get more complicated.
+
+Challenge 6: passed. Your and, or, and not are looking much better.
+
+
+---
+
+Challenge 7 — Nested decisions
+
+Now let's combine conditions + dictionaries + lists + strings + numbers.
+
+Use this:
+
+employees = [
+    {'name': 'John', 'age': 34, 'salary': 75000, 'active': True},
+    {'name': 'Mary', 'age': 28, 'salary': 68000, 'active': True},
+    {'name': 'Peter', 'age': 41, 'salary': 92000, 'active': False},
+    {'name': 'Grace', 'age': 31, 'salary': 81000, 'active': True},
+    {'name': 'David', 'age': 24, 'salary': 55000, 'active': False}
+]
+
+Create:
+
+result = {
+    'senior': [],
+    'junior': [],
+    'high_earner': [],
+    'inactive': []
+}
+
+For every employee:
+
+1. If age is 30 or above, put their name in senior.
+
+
+2. Otherwise, put their name in junior.
+
+
+3. If salary is 80,000 or above, put their name in high_earner.
+
+
+4. If they are not active, put their name in inactive.
+
+
+
+Then print the dictionary.
+
+Expected result
+
+You should be able to work out the exact names yourself.
+
+Restriction: Don't use comprehensions, set(), max(), min(), or anything new.
+
+This one is intentionally simpler than Challenge 5. I want to see whether you can now apply conditions cleanly without getting tangled in the logic.
+
+Send your code when you're ready.

@@ -10,9 +10,9 @@ status = {'eligible':[], 'needs_attention':[]}
 for data in employees:
  if data['age'] >= 30 and data['salary'] >= 80000 and data['active'] :
   status['eligible'].append(data['name'])
-else:
- if not data['active'] or data['salary'] < 60000:
-  status['needs_attention'].append(data['name'])
+ else:
+  if not data['active'] or (data['salary'] < 60000):
+   status['needs_attention'].append(data['name'])
      
 print(status)
 
