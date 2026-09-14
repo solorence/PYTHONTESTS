@@ -1,0 +1,36 @@
+Challenge 10 
+— One loop, multiple decisions
+Let's now deliberately make you 
+combine what you've learned.
+Use the same employees list.
+Write:
+def analyzeEmployees(employees):
+    ...
+Return this dictionary:
+{
+    'senior': [],
+    'junior': [],
+    'high_earner': [],
+    'low_earner': [],
+    'active': [],
+    'inactive': []
+}
+For each employee:
+Age >= 30 → senior
+Otherwise → junior
+Salary >= 80000 → high_earner
+Salary < 60000 → low_earner
+active == True → active
+active == False → inactive
+Important restriction
+This time, use only ONE for loop through employees.
+You will therefore have several if/else decisions inside the same loop.
+Don't use:
+comprehensions
+set()
+max()
+min()
+sum()
+Write it yourself and send me 
+your code. I'll review it without 
+giving you the solution beforehand.
