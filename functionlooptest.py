@@ -7,7 +7,7 @@ employees = [
 ]
 
 
-def analyzeEmployees():
+def analyzeEmployees(employees):
  status= {
     'senior': [],
     'junior': [],
@@ -16,3 +16,26 @@ def analyzeEmployees():
     'active': [],
     'inactive': []
  }
+
+ for staff in employees:
+  if staff['age'] >= 30:
+   status['senior'].append(staff['name'])
+  else:
+   status['junior'].append(staff['name'])
+ 
+  if  staff['salary'] >= 80000:
+   status['high_earner'].append(staff['name'])
+ 
+  if staff['salary'] < 60000:
+   status['low_earner'].append(staff['name'])
+
+  if staff['active']:
+   status['active'].append(staff['name'])
+ 
+  if not staff['active']:
+   status['inactive'].append(staff['name'])
+
+ return status
+
+
+print(analyzeEmployees(employees))
