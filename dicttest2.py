@@ -22,27 +22,38 @@ def analyzeSales(sales):
  
  for prod in productSalesCollection2:
   for name in productNames:
+   if name in prod and name in productSalesInfo.keys():
+    productSalesInfo[name][labels[1]]+= int(prod[1])
+    continue
+   
    if name in prod:
-    
     productSalesInfo[name]={}
     for i in range(len(labels)):     
-     productSalesInfo[name][labels[i]]= prod[i]  
+     productSalesInfo[name][labels[i]]= prod[i]
+     if productSalesInfo[name][labels[i]].isdecimal():
+      productSalesInfo[name][labels[i]] = int(productSalesInfo[name][labels[i]]) 
+   
  
- print(productSalesInfo)
+ print('\nproductSalesInfo'.upper(),'= ', productSalesInfo)
  
 
- #{
- #   'total_items_sold': {},
- #  'total_sales': {},
- #   'product_sales': {}
- #}
- #}
-eq
+ analysis = {
+   'total_items_sold':0,
+   'total_sales': 0,
+   'product_sales': {}
+ }
+
+ for name in productSalesInfo.keys():
+  analysis['total_items_sold'] += productSalesInfo[name]['quantity']
+
+ for name in productSalesInfo.keys():
+  analysis['total_sales'] += productSalesInfo[name]['quantity'] * productSalesInfo[name]['price'] 
+ 
+ for name in productSalesInfo.keys():
+  analysis['product_sales'][name] = productSalesInfo[name]['quantity'] * productSalesInfo[name]['price']
+
+ print('\nANALYSIS= ', analysis )
+
+ 
 
 analyzeSales(sales)
-
- 
-
- 
-
- 
