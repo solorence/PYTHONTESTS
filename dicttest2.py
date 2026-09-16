@@ -23,13 +23,10 @@ def analyzeSales(sales):
  for prod in productSalesCollection2:
   for name in productNames:
    if name in prod:
+    
     productSalesInfo[name]={}
-    for data in prod:
-     print(data)
-     for i in range(len(labels)):
-      print(i)      
-      productSalesInfo[name][labels[i]]= data
-      print(productSalesInfo)   
+    for i in range(len(labels)):     
+     productSalesInfo[name][labels[i]]= prod[i]  
  
  print(productSalesInfo)
  
@@ -39,7 +36,8 @@ def analyzeSales(sales):
  #  'total_sales': {},
  #   'product_sales': {}
  #}
-
+ #}
+eq
 
 analyzeSales(sales)
 
